@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var assert = require('assert');
 var app = express();
 
-var MONGODBURL = 'mongodb://localhost/test';
+var MONGODBURL = 'mongodb://admin:admin@ds159747.mlab.com:59747/learning';
 var ObjectId = require('mongodb').ObjectID;
 mongoose.connect(MONGODBURL);
 var restaurantSchema = require('./models/restaurant');
