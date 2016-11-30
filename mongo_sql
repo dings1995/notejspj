@@ -1,0 +1,19 @@
+use learning
+
+db.createCollection("restaurants")
+
+db.createCollection("users")
+
+db.users.insert(
+    {
+        user_name: "demo",
+        password: ""
+    }
+)
+
+db.users.insert(
+    {
+        user_name: "dings",
+        password: "dings"
+    }
+)
