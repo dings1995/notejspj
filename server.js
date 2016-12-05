@@ -33,7 +33,7 @@ app.get("/", function (req,res) {
 	if(req.session.user_id == null){
 		res.redirect('\login');
 	}else{
-		res.end('welcome to dings project');
+		res.redirect('/read');
 	}
 })
 
