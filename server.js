@@ -52,9 +52,14 @@ app.post("/login", function (req,res) {
 				res.status(500).json(err);
 				throw err
 			}else {
-				req.session.user_id = docs._id.toString();
-				req.session.user_name = docs.user_name;
-				res.redirect('/read')
+				console.log(docs);
+				if(docs != null){
+					req.session.user_id = docs._id.toString();
+					req.session.user_name = docs.user_name;
+					res.redirect('/read')
+				}else{
+					res.end("wrong username/ password");
+				}
 				// res.json(docs);
 			}
 		}

@@ -17,3 +17,10 @@ db.users.insert(
         password: "dings"
     }
 )
+
+db.users.insert(
+    {
+        user_name: "student",
+        password: ""
+    }
+)
